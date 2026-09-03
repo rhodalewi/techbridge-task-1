@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="page_container">
          <!--  Header page-->
    <div class="header_container">
       <header class="header">
@@ -63,16 +63,15 @@
 
 
             <!-- CTA BUTTON -->
-            <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/viewform" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="cta_button"
-          >
+             <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/viewform"
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="cta_button"
+            >
               Apply Now
               <span>&#x1F806;</span>
             </a>
-          </div>
 
           <!-- Mobile Navigation -->
           <details class="mobile_menu">
@@ -81,19 +80,35 @@
               <img src="./img/menu-icon.png" alt="Menu" class="menu_icon">
             </summary>
 
-            <nav>
-              <a href="#home"> Home</a>
-              <a href="#programs"> Programs </a>
-              <a href="#internship"> Internship </a>
-              <a href="#why">  Why Us </a>
-              <a href="#community">  Community  </a>
-              <a href="#contact"> Contact </a>
-            </nav>
+            <div class="nav_conainer">
+              <div class="nav">
+                <nav>
+                  <a href="#home"> Home</a>
+                  <a href="#programs"> Programs </a>
+                  <a href="#internship"> Internship </a>
+                  <a href="#why">  Why Us </a>
+                  <a href="#community">  Community  </a>
+                  <a href="#contact"> Contact </a>
+                </nav>
+
+                <!-- CTA BUTTON -->
+                <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/viewform"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="cta_button"
+                  >
+                    Apply Now
+                    <span>&#x1F806;</span>
+                </a>
+              </div>
+            </div>
           </details>
         </div>
       </header>
 
     </div> 
+
     <main>
         <!-- Hero Section -->
       <section class="hero" id="home">
@@ -218,7 +233,7 @@
           <div class="section_heading centered">
             <span class="tag">OUR PROGRAMS</span>
 
-            <h2> Build Skills That Move You Forward </h2>
+            <h2 class="program_h2"> Build Skills That Move You Forward </h2>
 
             <p> Explore TechBridge's current learning programs. </p>
           </div>
@@ -323,7 +338,7 @@
 
 
           <!-- Content -->
-          <div class="internship-content">
+          <div class="internship_content">
             <span class="tag">
               30-DAY PRACTICAL INTERNSHIP
             </span>
@@ -398,9 +413,9 @@
           <div>
             <span class="tag"> WHY TECHBRIDGE</span>
 
-            <h2>  Learning Should Lead Somewhere.</h2>
+            <h2 why_h2>  Learning Should Lead Somewhere.</h2>
 
-            <p>
+            <p class="why_p">
               TechBridge focuses on connecting learning with practical
               experience. The goal is to give learners an opportunity
               to develop useful skills and put those skills into practice.
@@ -414,18 +429,18 @@
               <span> &checkmark; </span>
 
               <div>
-                <h3>   Learn with purpose</h3>
+                <h3> Learn with purpose</h3>
                 <p> Build skills through focused programs. </p>
               </div>
             </div>
 
-            <div class="why_point">
+            <!-- <div class="why_point">
               <span> &checkmark; </span>
               <div>
                 <h3> Practice what you learn </h3>
                 <p> Use practical activities and projects to reinforce your learning. </p>
               </div>
-            </div>
+            </div> -->
 
             <div class="why_point">
              <span> &checkmark; </span>
@@ -479,7 +494,6 @@
 
 
      <!--  COMMUNITY + CONTACT -->
-
       <section
         class="contact_section section"
         id="community"
@@ -509,7 +523,7 @@
               </a>
             </div>
 
-            <img src="./img/contact-illustration.png" alt="Illustration">
+            <img src="./img/contact-illustration.png" alt="Illustration" class="Illustration">
           </article>
 
 
@@ -537,23 +551,19 @@
               </a>
             </div>
 
-           <img src="./img/email-illustration.png" alt="Illustration">
+           <img src="./img/email-illustration.png" alt="Illustration" class="Illustration">
           </article>
         </div>
       </section>
     </main>
 
-
-    
-       /*  FOOTER */
-   
-
+    <!-- FOOTER SECTION -->
     <footer class="footer">
 
-      <div class="container footer-grid">
+      <div class="container footer_grid">
 
         <!-- Brand -->
-        <div class="footer-brand">
+        <div class="footer_brand">
           <img
             src=".//img//techbridge-logo.png"
             alt="TechBridge logo"
@@ -564,7 +574,7 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="footer-column">
+        <div class="footer_column">
 
           <h3>  Quick Links </h3>
 
@@ -578,7 +588,7 @@
 
 
         <!-- Programs -->
-        <div class="footer-column">
+        <div class="footer_column">
           <h3>  Programs</h3>
           <a href="#programs">  Data Analytics</a>
           <a href="#programs">  Web Development  </a>
@@ -586,7 +596,7 @@
 
 
         <!-- Resources -->
-        <div class="footer-column">
+        <div class="footer_column">
           <h3> Resources </h3>
 
          
@@ -606,7 +616,7 @@
 
 
         <!-- Contact -->
-        <div class="footer-column">
+        <div class="footer_column">
           <h3>Contact </h3>
 
           <a href="mailto:techbridgebaslink@gmail.com">  techbridgebaslink@gmail.com</a>
@@ -614,7 +624,7 @@
 
       </div>
 
-      <div class="container footer-bottom">
+      <div class="container footer_bottom">
         <p>
           © 2026 TechBridge by Baselink Services Limited.
           All rights reserved.
@@ -622,6 +632,5 @@
       </div>
     </footer>
   </div>
-
 </body>
 </html>
