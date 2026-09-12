@@ -46,6 +46,12 @@
   --dark: #071A49;
   --dark-2: #020B21;
 
+  /* Roadmaps color */
+  --phase-3: rgb(241, 91, 25);
+  --phase-3-bg: rgb(255, 248, 239);
+  --phase-3-border: rgb(244, 223, 195);
+  --phase-3-label-bg: rgb(255, 236, 212);
+
 
   /* Other */
 
@@ -294,12 +300,12 @@ img {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 7rem 2.5rem 5.5rem;
+  padding: 7rem 2.5rem 5.5rem 5rem;
   background: var(--bg);
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   align-items: center;
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 
@@ -337,10 +343,11 @@ img {
 }
 
 .hero_text {
-  max-width: 35.75rem;
+  max-width: 35rem;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.5;
+  margin-top: 1rem;
 }
 
 .hero_buttons {
@@ -424,7 +431,6 @@ img {
   border-radius: 40px 40px 110px 40px;
   box-shadow: var(--shadow);
   background: transparent;
- /*  border: 2px solid red; */
 }
 
 .floating-card {
@@ -477,12 +483,13 @@ img {
   text-align: center;
 }
 
-.section_heading h2,
-.why h2 {
-  margin-top: 9px;
+.program_h2,
+.why h2,
+.internship_h2 {
+  margin-top: 0.565rem;
   font-family: var(--font-manrope);
   color: var(--text);
-  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-size: 2rem;
   line-height: 1.15;
   letter-spacing: -0.035em;
 }
@@ -533,8 +540,8 @@ img {
   background: var(--web-bg);
 }
 
-.program_icon img{
-  width: 60px;
+.program_icon {
+  width: 30%;
   height: fit-content;
 }
 
@@ -551,7 +558,6 @@ img {
 }
 
 .program_content p {
-  max-width: 370px;
   margin: 0.625rem 0 1.25rem;
   color: var(--text-2);
   font-size: 0.92rem;
@@ -633,23 +639,19 @@ img {
   box-shadow:0 18px 40px rgba(8, 166, 166, 0.28);
 }
 
-
 .badge_icon img{
   width: 60px;
   height: auto;
 }
-
 
 .recommendation-badge strong,
 .recommendation-badge small {
   display: block;
 }
 
-
 .recommendation-badge strong {
   font-size: 0.83rem;
 }
-
 
 .recommendation-badge small {
   margin-top: 3px;
@@ -663,7 +665,6 @@ img {
 .internship_content h2 {
   font-family: var(--font-manrope);
   color: var(--text);
-  font-size:2.5rem;
   line-height: 1.12;
   letter-spacing: -0.035em;
 }
@@ -785,8 +786,7 @@ div:first-child p {
 
 /*  APPLICATION  CTA */
 .cta_section {
-  padding:
-    0 0 1.5rem;
+  padding: 0 0 1.5rem;
 }
 
 .cta_box {
@@ -1012,7 +1012,7 @@ div:first-child p {
 
 .program_hero_illustration {
   scale: 1.2; 
-  transform: translateX(0.5rem);
+  transform: translateX(-1rem);
 }
 
 .program_overview {
@@ -1035,10 +1035,6 @@ div:first-child p {
   font-size: 0.875rem; 
 }
 
-.presentation_heading h2 {
-  font-size: 2rem;
-}
-
 .program_presentation_cards .program_grid {
   align-items: start;
 }
@@ -1050,8 +1046,8 @@ div:first-child p {
 
 .info {
   display: flex;
+  align-items: start;
   gap: 1.25rem;
-  margin-bottom: 0.75rem;
 }
 
 .dataAnalysis_card h3,
@@ -1103,7 +1099,8 @@ div:first-child p {
   list-style: none;
 }
 
-.learning_items[open] summary {
+.learning_items[open] summary,
+.task_details[open] summary {
   border-bottom: 1px solid var(--muted);
   padding-bottom: 0.75rem;
 }
@@ -1121,7 +1118,8 @@ div:first-child p {
 }
 
 .learning_items summary::-webkit-details-marker,
-.learning_items summary::marker {
+.learning_items summary::marker,
+.task_details summary ::marker {
     display: none;
 }
 
@@ -1131,7 +1129,8 @@ div:first-child p {
     transition: transform 0.5s ease;
 }
 
-.learning_items[open] summary::after {
+.learning_items[open] summary::after,
+.task_details[open] summary::after {
   transform:  rotate(90deg);
 }
 
@@ -1325,12 +1324,12 @@ div:first-child p {
 
 .journey_section {
   text-align: center;
-  padding-bottom: 0.5rem;
 }
 
 .journey_header {
   max-width: 650px;
   margin: 0 auto 3.5rem;
+  padding: 0 1rem;
 }
 
 .journey_header h2,
@@ -1344,7 +1343,6 @@ div:first-child p {
 
 .journey_header p,
 .roadmap_heading p {
-  max-width: 600px;
   margin: 0.8rem auto 0;
   color: var(--muted);
   font-size: 0.85rem;
@@ -1387,7 +1385,7 @@ div:first-child p {
 .phase_label {
   padding: 0.25rem 0.8rem;
   border-radius: 50px;
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -1407,7 +1405,6 @@ div:first-child p {
 }
 
 .phase_card p {
-  max-width: 300px;
   margin-bottom: 0.5rem;
   color: var(--muted);
   font-size: 0.8rem;
@@ -1442,13 +1439,13 @@ div:first-child p {
 }
 
 .phase_three {
-  background-color: rgb(255, 248, 239);
-  border-color: rgb(244, 223, 195);
+  background-color: var(--phase-3-bg);
+  border-color: var(--phase-3-border);
 }
 
 .phase_three .phase_label {
-  background-color: rgb(255, 236, 212);
-  color: rgb(232, 117, 24);
+  background-color: var(--phase-3-label-bg);
+  color: var(--phase-3);
 }
 
 .difficulty_scale {
@@ -1456,9 +1453,9 @@ div:first-child p {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.2rem;
- /*  margin: 0 auto 4rem; */
-  padding: 0.5rem 0;
+  gap: 1rem;
+  margin: 0 auto;
+  padding:  0.75rem;
 }
 
 .difficulty_title {
@@ -1466,12 +1463,14 @@ div:first-child p {
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.06em;
+  margin-right: 0.5rem;
 }
 
 .difficulty_item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
   color: var(--text-2);
 }
 
@@ -1508,54 +1507,70 @@ div:first-child p {
   font-size: 0.75rem;
 }
 
-
 .roadmap {
   padding: 2rem ;
   margin-bottom: 2rem;
-  background-color: var(--program-hero-bg);
+  background-color: var(--bg-soft);
   border-radius: var(--radius-md);
+  position: relative;
 }
 
 .roadmap_heading {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.verses_container {
+.roadmap .verses_container {
   max-width: 1000px;
-  margin: 0 auto 1rem;
-  margin-top: 1.5rem;
+  margin: 2rem auto;
   flex-direction: row;
 }
 
-.verses_container span  {
+.roadmap .verses_container span  {
   width: 100%;
   border-style: solid;
   border-color: var(--secondary-opacity);
 }
 
-.verses_container p {
-  padding: 0 0.5rem ;
+.roadmap .verses_container.building_stage span {
+  border-color: var(--primary-opacity);
+}
+
+.roadmap .verses_container.integration_stage span {
+  border-color: var(--phase-3-border);
+}
+
+.roadmap .verses_container p {
+  padding: 0.1rem 0.75rem ;
   border-radius: var(--radius-md);
   font-size: 0.8rem;
   white-space: nowrap;
   color: var(--secondary);
-  /* border: 1px solid red; */
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary-opacity);
+}
+
+.roadmap .verses_container.building_stage p {
+  background-color: var(--primary-opacity);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.roadmap .verses_container.integration_stage p {
+  color: var(--phase-3);
+  border-color: var(--phase-3);
+  background-color: var(--phase-3-bg);
 }
 
 .roadmap_timeline {
   max-width: 1000px;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
   position: relative;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-  column-gap: 7rem;
-  row-gap: 1.5rem;
-
-  padding: 1rem 0;
+  gap: 1rem 7rem;
+  align-items: start;
 }
-
 
 /* Central line */
 .roadmap_timeline::before {
@@ -1565,65 +1580,156 @@ div:first-child p {
   bottom: 0;
   left: 50%;
   width: 1px;
-  background: #ccefed;
+  background-color: var(--secondary);
   transform: translateX(-50%);
 }
 
+.roadmap_timeline.timeline_2::before {
+  background: var(--primary);
+}
+
+.roadmap_timeline.timeline_3::before {
+  background-color: var(--phase-3);
+}
 
 /* Task cards */
-
 .task_card {
   position: relative;
-  padding: 1.4rem 1.5rem;
+  padding: 1rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   background: var(--bg);
   box-shadow: 0 8px 25px rgba(11, 31, 75, 0.04);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
 }
 
-
-.task_card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
+.task_content {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
 }
 
+.task_no {
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-lg);
+  background: var(--secondary-opacity);
+  color: var(--secondary);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
 
-/* Left cards */
+.timeline_2 .task_no {
+  background: var(--primary-opacity);
+  color: var(--primary);
+}
+
+.timeline_3 .task_no {
+  background: var(--phase-3-bg);
+  color: var(--phase-3);
+}
+
+.task_day {
+  color: var(--text-2);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--primary-opacity);
+  color: var(--primary);
+}
+
+.timeline_1 .task_day {
+  background-color: var(--secondary-opacity);
+  color: var(--secondary);
+}
+
+.timeline_3 .task_day {
+  background-color: var(--phase-3-label-bg);
+  color: var(--phase-3);
+}
+
+.task_card h3 {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  font-family: var(--font-manrope);
+}
+
+.task_card .task_text {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  max-width: 80%;
+}
+
+.task_details {
+  margin: 0.875rem 0.875rem 0;
+}
+
+.task_details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.expand_btn:hover {
+  text-decoration: underline;
+}
+
+.task_details p {
+  font-size: 0.825rem;
+  color: var(--dark);
+  padding: 1rem 0;
+}
+
+.skills strong{
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.skills .skill_list small{
+  font-size: 0.75rem !important;
+  padding: 0.12rem 0.825rem !important;
+  color: var(--muted);
+  background-color: var(--secondary-opacity);
+}
+
+.timeline_2 .skill_list small {
+  background-color: var(--primary-opacity);
+}
+.timeline_3 .skill_list small {
+    background: var(--phase-3-label-bg);
+}
+
 .task_left {
   grid-column: 1;
 }
 
-/* Right cards */
 .task_right {
   grid-column: 2;
 }
 
-/* Make cards alternate vertically */
-.task_left:nth-child(1) {
+.task_left:nth-child(1),
+.timeline_2 .task_right:nth-child(1) {
   grid-row: 1;
 }
 
-.task_right:nth-child(2) {
+.task_right:nth-child(2),
+.timeline_2 .task_left:nth-child(2) {
   grid-row: 2;
 }
 
-.task_left:nth-child(3) {
+.task_left:nth-child(3),
+.timeline_2 .task_right:nth-child(3) {
   grid-row: 3;
-}
-
-.task_right:nth-child(4) {
-  grid-row: 4;
-}
-
-.task_left:nth-child(5) {
-  grid-row: 5;
-}
-
-.task_right:nth-child(6) {
-  grid-row: 6;
 }
 
 .task_left:nth-child(7) {
@@ -1634,131 +1740,108 @@ div:first-child p {
   grid-row: 8;
 }
 
-.task_header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 0.8rem;
-}
-
-.task_header > div {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.task_day {
-  padding: 5px 9px;
-  border-radius: 50px;
-  background: #e1f7f6;
-  color: #08a5a5;
-  font-size: 0.6rem;
-  font-weight: 700;
-}
-
-
-.task_number {
-  color: var(--text-2);
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-
-.task_card h3 {
-  margin-bottom: 0.55rem;
-  color: var(--text);
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.task_card p {
-  max-width: 470px;
-  color: var(--text-2);
-  font-size: 0.7rem;
-  line-height: 1.65;
-}
-
-
-
 /*    DIFFICULTY BADGES */
-.difficulty_badge {
-  padding: 5px 9px;
-  border-radius: 50px;
-  font-size: 0.55rem;
-  font-weight: 600;
+.difficulty_badge,
+.skills .skill_list small {
+  padding: 0.12rem 0.525rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.575rem;
+  font-weight: 700;
   white-space: nowrap;
 }
 
-.difficulty_badge.beginner {
-  background: #e5f8f6;
-  color: #08a5a5;
-}
-
-
+.difficulty_badge.beginner,
 .difficulty_badge.beginner_intermediate {
-  background: #edf5ff;
-  color: #4277d1;
+  background-color: var(--secondary-opacity);
+  color: var(--secondary);
 }
 
 .difficulty_badge.intermediate {
-  background: #f1ebff;
-  color: #6843c5;
+  background-color: rgba(242, 166, 26, 0.11);
+  color: #f2a51a;
 }
 
 .difficulty_badge.intermediate_advanced {
-  background: #fff0e4;
-  color: #e87518;
+  background-color: rgba(255, 240, 228, 0.719);
+  color: #f47b19;
 }
 
 .difficulty_badge.advanced {
-  background: #ffe9dc;
-  color: #e45c1a;
+  background-color: rgb(255, 233, 220);
+  color: #f15b19;
 }
 
-.task_card::after {
+.roadmap_timeline .task_card::after {
   content: "";
   position: absolute;
   top: 50%;
-  width: 7rem;
+  width: 3rem;
   height: 1px;
   background: #ccefed;
 }
 
-/* Left → center */
 .task_left::after {
-  right: -7rem;
+  right: -3.5rem;
 }
 
-/* Right → center */
 .task_right::after {
-  left: -7rem;
+  left: -3.5rem;
 }
 
 /* Timeline dots */
-.task_card::before {
+.roadmap_timeline .task_card::before {
   content: "";
   position: absolute;
   top: 50%;
-  width: 12px;
-  height: 12px;
-  border: 2px solid white;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--bg);
   border-radius: 50%;
-  background: #08a5a5;
-  box-shadow: 0 0 0 1px #08a5a5;
+  background: var(--secondary);
+  box-shadow: 0 0 0 1px var(--secondary);
   transform: translateY(-50%);
   z-index: 2;
 }
 
-/* Left dot */
-.task_left::before {
-  right: -7.35rem;
+.roadmap_timeline.timeline_1 .task_card:nth-child(1)::before,
+.roadmap_timeline.timeline_1 .task_card:nth-child(2)::before,
+.roadmap_timeline.timeline_1 .task_card:nth-child(3)::before {
+  background-color: var(--secondary);
+  box-shadow: 0 0 0 1px var(--secondary);
 }
 
-/* Right dot */
+.roadmap_timeline.timeline_2 .task_card:nth-child(1)::before,
+.roadmap_timeline.timeline_2 .task_card:nth-child(2)::before,
+.roadmap_timeline.timeline_2 .task_card:nth-child(3)::before {
+  background-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+
+.roadmap_timeline.timeline_3 .task_card:nth-child(1)::before,
+.roadmap_timeline.timeline_3 .task_card:nth-child(2)::before {
+  background-color: var(--phase-3);
+  box-shadow: 0 0 0 1px var(--phase-3);
+}
+
+/*  dots */
+.task_left::before {
+  right: -4.1rem;
+}
+
 .task_right::before {
-  left: -7.35rem;
+  left: -4.1rem;
+}
+
+.intern_application_cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inquiry {
+  font-size: 0.75rem;
 }
 
 
@@ -1778,6 +1861,14 @@ div:first-child p {
    position: relative;
    width: min(100% - 26px, var(--container));
    padding: 1.25rem 0;
+  }
+
+  .brand_logo .logo{
+    width: 120px;
+  }
+
+  .brand_logo p {
+    font-size: 0.5rem;
   }
 
   .toggle_sidebar {
@@ -1843,7 +1934,7 @@ div:first-child p {
   }
 
   .menu_btn {
-    scale: 0.8;
+    scale: 0.7;
   }
 
   .menu_btn .close_icon,
@@ -1881,12 +1972,16 @@ div:first-child p {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .tag {
+    font-size: 0.65rem;
   }
 
   .hero h1 {
-    font-size: 2rem !important;
+    font-size: 1.75rem !important;
   }
 
   .hero_buttons {
@@ -1916,6 +2011,8 @@ div:first-child p {
 
   .program_card {
     padding: 2.2rem 1.5rem;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .data_Illustration {
@@ -1945,10 +2042,6 @@ div:first-child p {
 
   .internship_content {
    text-align: center; 
-  }
-
-  .internship_content h2 {
-    font-size: 2.25rem;
   }
 
   .benefits {
@@ -2035,8 +2128,12 @@ div:first-child p {
     align-items: center;
   }
 
+  .footer_brand img {
+    width: 44%;
+  }
+
   .footer_brand p {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 
   .footer_column,
@@ -2050,16 +2147,33 @@ div:first-child p {
     padding-bottom: 3.5rem;
   }
 
-  .program_hero_illustration {
+  .program_hero_illustration,
+  .internship_hero .hero_visual {
     display: none;
   } 
 
-  .hero_content .hero_text {
+  .program_hero .hero_text {
       padding: 0 2rem;
   }
 
   .program_features {
     flex-direction: column;
+    margin: 2rem auto 0;
+    gap: 1rem;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .program_icon {
+    width: 16%;
+  }
+
+  .program_mini_feature span {
+    padding: 0.375rem 0.675rem;
+    font-size: 0.75rem;
   }
 
   .program_feature_content {
@@ -2077,7 +2191,6 @@ div:first-child p {
   .differ_container {
     padding: 2rem 1rem;
     margin-bottom: 5rem;
-    
   }
 
   .diff_contents {
@@ -2110,6 +2223,93 @@ div:first-child p {
     right: 2rem;
   }
 
+  /* Internship Page Style */
+  .internship_hero .feature_icon  {
+    width: 34px;
+    height: 34px;
+  }
+
+  .journey_section .phase_cards {
+    grid-template-columns: 1fr;
+  }
+
+  .difficulty_scale {
+    gap: 0.25rem 1.25rem;
+  }
+
+  .difficulty_title {
+    font-size: 0.675rem;
+  }
+
+  .roadmap {
+    padding: 1.25rem;
+  }
+
+  .roadmap_timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    max-width: 100%;
+  }
+
+  .roadmap_timeline::before {
+    left: 0;
+    width: 2px;
+  }
+
+  .task_content {
+    gap: 0.75rem;
+  }
+
+  .task_no {
+    padding: 0.325rem 0.525rem;
+    font-size: 0.75rem;
+  }
+
+  .task_card h3 {
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  .task_details summary{
+    gap: 0.5rem;
+  }
+
+  .task_left,
+  .task_right {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+  }
+
+  .roadmap_timeline .task_card::after {
+    display: none;
+  }
+
+  .roadmap_timeline .task_card::before {
+    left: -1.55rem;
+    right: auto;
+  }
+
+  .roadmap .verses_container {
+    margin: 1rem auto;
+  }
+
+  .journey_header h2,
+  .roadmap_heading h2,
+  .program_h2,
+  .internship_h2,
+  .why h2  {
+    font-size: 1.5rem;
+  }
+
+  .phase_cards {
+    padding: 0.75rem;
+    width: min(100% - 90px, var(--container));
+  }
+
+  
 }
 
 /* TABLET VIEW */
@@ -2130,6 +2330,11 @@ div:first-child p {
     margin: 0 auto;
   }
 
+  .program_features {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
   .hero_buttons {
     flex-direction: row;
     justify-content: center;
@@ -2138,6 +2343,15 @@ div:first-child p {
   .program_grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  .program_card {
+    gap: 1rem;
+  }
+
+  .info {
+    flex-direction: row;
+    gap: 1rem;
   }
 
   .benefit, 
@@ -2159,9 +2373,12 @@ div:first-child p {
   }
 
   .footer_brand img {
-    width: 36%;
-  } 
+    width: 32%;
 
+  } 
+  .footer_brand p {
+    font-size: 0.75rem;
+  }
   
   .program_overview .program_grid {
     grid-template-columns: 1fr;
@@ -2171,6 +2388,46 @@ div:first-child p {
   .program_overview .program_card {
     padding: 2.2rem 1.75rem;
   } 
+
+  .phase_cards {
+    grid-template-columns: repeat(3, 1fr) !important;
+    width: min(100% - 20px, var(--container));
+    gap: 0.75rem;
+  }  
+
+  .roadmap_timeline {
+    display: grid ;
+    grid-template-columns: 1fr 1fr ;
+    padding-left: 0;
+    gap: 1rem 3rem;
+  }
+
+  .roadmap_timeline::before {
+    left: 50%;
+    width: 1px;
+  }
+
+  .task_left {
+    grid-column: 1;
+  
+  }
+
+  .task_right {
+    grid-column: 2;
+  }
+
+  .roadmap_timeline .task_card::before {
+    left: auto;
+    right: auto;
+  }
+
+  .task_left::before  {
+    right: -2.1rem !important;
+  }
+
+  .task_right::before {
+    left: -2.1rem !important;
+  }
 }
 
 @media (min-width: 1024px ) and (max-width:1296px) {
