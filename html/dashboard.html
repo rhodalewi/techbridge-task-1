@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Intern Dashboard - TechBridge</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="shortcut icon" href="/img/techbridge-logo.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <div class="dashboard_container">
+             <!-- HEADER -->
+            <header class="header_container">
+                <div class="header container">
+                    <div class="dashboard_logo">
+                        <!-- Logo -->
+                        <a href="/" class="brand_logo">
+                            <img
+                                src="/img/techbridge-logo.png"
+                                alt="TechBridge logo"
+                                class="logo"
+                            >
+                        </a>
+
+                        <span>&VerticalLine;</span>
+
+                        <p>Intern Dashboard</p>
+                    </div>
+
+                    <div class="button_avatar">
+                        <a href="/html/challenges.html" class="btn_outline cta_button">
+                            Challenge Hub
+                        </a>
+
+                        <span class="intern_avatar">F</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MAIN  -->
+            <main class="dashboard">
+                <div class="container dashboard_content">
+                     <!--   WELCOME SECTION -->
+                    <section class="dashboard_welcome">
+                        <div class="welcome_content">
+                            <span class="dashboard_label">Welcome back,</span>
+
+                            <h1 id="intern_name"> Fiona Williams</h1>
+
+                            <div class="intern_meta">
+                                <span id="intern_track">Web Development Intern</span>
+
+                                <span class="meta_divider"></span>
+
+                                <span class="intern_status tag">
+                                    <i class="status_dot"></i>
+                                    <span id="intern_status">
+                                        In Progress
+                                    </span>
+                                </span>
+                            </div>
+
+                            <p> Keep building, keep learning, and make progress throughout your TechBridge internship journey.</p>
+                        </div>
+
+                        <div class="welcome_visual">
+                            <div class="visual_shape shape_one"></div>
+                            <div class="visual_shape shape_two"></div>
+                        </div>
+                    </section>
+
+                    <!-- DASHBOARD CONTENT -->
+                    <div class="dashboard_layout">
+                        <!-- MAIN COLUMN -->
+                        <div class="dashboard_main">
+                            <!-- INTERNSHIP PROGRESS -->
+                            <section class="dashboard_card progress_section">
+                                <h2 class="card_title">Internship Progress</h2>
+
+                                <!-- Progress Stats -->
+                                <div class="progress_stats">
+                                    <div class="progress_stat">
+                                        <span class="stat_number" id="total_task">
+                                            
+                                        </span>
+
+                                        <span class="stat_text">
+                                            Total Tasks
+                                        </span>
+                                    </div>
+
+                                    <div class="progress_stat">
+                                        <span class="stat_number completed_task" id="completed_task">
+                                            
+                                        </span>
+
+                                        <span class="stat_text">
+                                            Completed
+                                        </span>
+
+                                    </div>
+
+                                    <div class="progress_stat">
+                                        <span class="stat_number" id="inProgress_task">
+                                            
+                                        </span>
+
+                                        <span class="stat_text">In Progress</span>
+                                    </div>
+
+                                    <div class="progress_stat">
+                                        <span
+                                            class="stat_number"
+                                            id="notStarted_task"
+                                        >
+                                            
+                                        </span>
+
+                                        <span class="stat_text"> Not Started</span>
+                                    </div>
+                                </div>
+
+                                <!-- Progress Bar -->
+                                <div class="progress_bar_area">
+                                    <div class="progress_bar_header">
+                                        <span id="progress_text"></span>
+
+                                        <span id="progress_percent_text"> </span>
+                                    </div>
+
+                                    <div class="progress_bar">
+                                        <div
+                                            class="progress_fill"
+                                            id="progress_fill"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </section>
+                          
+                            <!-- TASK TRACKER -->
+                            <section class="dashboard_card task_section">
+                                <div class="section_header task_header">
+                                    <div class="task_header_content">
+                                        <h2 class="card_title"> My Internship Tasks</h2>
+
+                                        <p> Complete all 8 tasks to finish your internship journey. </p>
+                                    </div>
+
+                                    <!-- Task Filters -->
+                                    <div
+                                        class="task_filters"
+                                        id="task_filters"
+                                    >
+                                        <button
+                                            type="button"
+                                            class="task_filter active"
+                                            data-status="all"
+                                        >
+                                            All
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="task_filter"
+                                            data-status="completed"
+                                        >
+                                            Completed
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="task_filter"
+                                            data-status="in-progress"
+                                        >
+                                            In Progress
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="task_filter"
+                                            data-status="not-started"
+                                        >
+                                            Not Started
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                                <!-- Task Cards -->
+                                <div
+                                    class="task_grid"
+                                    id="task_container"
+                                ></div>
+
+                                <div id="task_no_results" class="no_result_container" hidden>
+                                    <img src="/img/empty-icon.png" alt="No result found">
+
+                                    <p class="no_results task_no_results">
+                                        No tasks found.
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+
+                         <!-- RIGHT COLUMN -->
+                        <aside class="dashboard_sidebar">
+                                <!-- CHALLENGE HUB -->
+                            <section class="dashboard_card challenge_preview">
+                                <div class="challenge_header">
+                                    <div class="preview_icon">
+                                        <img
+                                            src="/img/challenge-icon.png"
+                                            alt="Challenge"
+                                        >
+                                    </div>
+
+                                    <div class="challenge_header_content">
+                                        <h2> Challenge Hub </h2>
+
+                                        <div class="challenge_available">
+                                            <strong id="challenge_available_count">
+                                                6
+                                            </strong>
+
+                                            <span>Challenges Available</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>
+                                    Explore practical challenges and
+                                    put your skills to the test.
+                                </p>
+
+                                <a
+                                    href="/html/challenges.html"
+                                    class="cta_button"
+                                >
+                                    Explore Challenges
+                                </a>
+                            </section>
+
+                             <!-- MODERN WEB TECHNOLOGIES -->
+                            <section class="dashboard_card technology_section">
+                                <div class="section_header">
+                                    <span class="card_label"> KEEP LEARNING</span>
+                                    <div class="modern_tech_header">
+                                        <img src="/img/web-developement-icon.png" alt="">
+
+                                        <div>
+                                            <h2>Modern Web Technologies </h2>
+                                            <p class="technology_intro">
+                                                Explore technologies used to build
+                                                modern web applications.
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- Technology Filters -->
+                                <div
+                                    class="technology_filters"
+                                    id="technology_filters"
+                                >
+                                    <button
+                                        type="button"
+                                        class="technology_btn active"
+                                        data-technology="nextjs"
+                                    >
+                                        Next.js
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="technology_btn"
+                                        data-technology="vue"
+                                    >
+                                        Vue.js
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="technology_btn"
+                                        data-technology="angular"
+                                    >
+                                        Angular
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="technology_btn"
+                                        data-technology="backend"
+                                    >
+                                        Backend
+                                    </button>
+                                </div>
+
+                                <!-- Technology Content -->
+                                <div class="technology_content">
+                                    <div class="technology_content_header">
+                                        <div
+                                            class="technology_icon"
+                                            
+                                        >
+                                            <img src="" alt="" id="technology_icon">
+                                        </div>
+                                    
+                                        <h3 id="technology_title"></h3>
+                                    </div>
+
+                                    <p id="technology_description"></p>
+
+                                    <ul
+                                        class="technology_features"
+                                        id="technology_features"
+                                    ></ul>
+
+                                    <a
+                                        href=""
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="technology_link cta_button"
+                                        id="technology_link"
+                                    >
+                                        Learn More &#x1F806;
+                                    </a>
+                                </div>
+                            </section>
+                        </aside>
+                    </div>
+                </div>
+            </main>
+
+            <!-- TASK DETAILS MODAL -->
+            <div
+                class="task_modal"
+                id="task_modal"
+                aria-hidden="true"
+            >
+                <div
+                    class="task_modal_overlay"
+                    data-close-task-modal
+                ></div>
+
+                <div
+                    class="task_modal_content" id="task_modal"
+                    aria-modal="true"
+                    aria-labelledby="task_modal_title"
+                >
+                    <div class="task_modal_header">
+                        <div>
+                            <span
+                                class="task_modal_number"
+                                id="task_modal_number"
+                            ></span>
+
+                            <h2 id="task_modal_title"></h2>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="task_modal_close"
+                            id="task_modal_close"
+                            aria-label="Close task details"
+                        >
+                            <img
+                                src="/img/icon-close.svg"
+                                alt=""
+                            >
+                        </button>
+                    </div>
+
+                    <div class="task_modal_body">
+                        <div class="task_modal_status">
+                            <span id="task_modal_status"></span>
+                        </div>
+
+                        <div class="task_modal_section">
+                            <h3>About This Task </h3>
+                            <p id="task_modal_description"></p>
+                        </div>
+
+
+                        <div class="task_modal_section">
+                            <h3>What You'll Do
+                            </h3>
+
+                            <p id="task_modal_details"></p>
+                        </div>
+
+                        <button 
+                            type="button"  class="task_modal_close" id="cta_button"
+                            aria-label="Close task details"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer_bottom container">
+                <p>
+                    &copy; 2026 TechBridge by Baselink Services Limited.
+                    All rights reserved.
+                </p>
+            </footer>
+        </div>
+
+        <script src="/script.js"></script>
+    </body>
+</html>

@@ -18,21 +18,21 @@ const internshipTracks = {
     ],
 
     webDevelopment: [
-        {number: "01", title: "Build the TechBridge Homepage", day: 1, description: "Create the first version of the TechBridge website using HTML and CSS.", difficult: "Beginner", details: "You'll build a complete homepage for the TechBridge platform, introducing the organisation, communicating its programs, and giving visitors a clear call to action. This task focuses on structure, layout, and fundamental web design principles.", skill: ["HTML", "CSS", "Responsive Design"]},
+        {number: "01", title: "Build the TechBridge Homepage", day: 1, description: "Create the first version of the TechBridge website using HTML and CSS.", difficult: "Beginner", details: "You'll build a complete homepage for the TechBridge platform, introducing the organisation, communicating its programs, and giving visitors a clear call to action. This task focuses on structure, layout, and fundamental web design principles.", skill: ["HTML", "CSS", "Responsive Design"], status: "completed"},
 
-        {number: "02", title: "Build the TechBridge Programs Experience", day: 4, description: "Create a Programs experience that presents TechBridge's available learning programs.", difficult: "Beginner", details: "You'll create a dedicated Programs experience that presents TechBridge's available learning programs. The page will help visitors understand the different programs, what they offer, and how they can get started.", skill: ["HTML", "CSS", "Responsive Design"]},
+        {number: "02", title: "Build the TechBridge Programs Experience", day: 4, description: "Create a Programs experience that presents TechBridge's available learning programs.", difficult: "Beginner", details: "You'll create a dedicated Programs experience that presents TechBridge's available learning programs. The page will help visitors understand the different programs, what they offer, and how they can get started.", skill: ["HTML", "CSS", "Responsive Design"], status: "completed"},
 
-        {number: "03", title: "Build the Internship Tasks Experience", day: 8, description: "Create an interface that presents the TechBridge internship tasks and helps users understand the internship journey.", difficult: "Beginner → Intermediate", details: "You'll design and build an Internship Tasks experience that presents the complete TechBridge internship journey. You'll organize the tasks, show when they are introduced, communicate their difficulty progression, and create a responsive experience for visitors.", skill: ["HTML", "CSS", "Responsive Design"]},
+        {number: "03", title: "Build the Internship Tasks Experience", day: 8, description: "Create an interface that presents the TechBridge internship tasks and helps users understand the internship journey.", difficult: "Beginner → Intermediate", details: "You'll design and build an Internship Tasks experience that presents the complete TechBridge internship journey. You'll organize the tasks, show when they are introduced, communicate their difficulty progression, and create a responsive experience for visitors.", skill: ["HTML", "CSS", "Responsive Design"], status: "completed"},
 
-        {number: "04", title: "Build an Interactive Task Tracker", day: 11, description: "Use JavaScript to make the internship task experience interactive and allow progress to be tracked.", difficult: "Beginner → Intermediate", details: "You'll introduce JavaScript by transforming the internship roadmap into an interactive experience. Visitors will be able to switch between the Data Analytics and Web Development tracks without refreshing the page.", skill: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Responsive Design"]},
+        {number: "04", title: "Build an Interactive Task Tracker", day: 11, description: "Use JavaScript to make the internship task experience interactive and allow progress to be tracked.", difficult: "Beginner → Intermediate", details: "You'll introduce JavaScript by transforming the internship roadmap into an interactive experience. Visitors will be able to switch between the Data Analytics and Web Development tracks without refreshing the page.", skill: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Responsive Design"],  status: "completed"},
 
-        {number: "05", title: "Build the Intern Registration Experience", day: 15, description: "Build the Intern Registration Experience", difficult: "Intermediate", details: "You'll design and build a professional registration and onboarding experience for new TechBridge interns. The interface should guide users through the information and actions required to begin their internship journey.", skill: ["HTML", "CSS", "Forms", "JavaScript"]},
+        {number: "05", title: "Build the Intern Registration Experience", day: 15, description: "Build the Intern Registration Experience", difficult: "Intermediate", details: "You'll design and build a professional registration and onboarding experience for new TechBridge interns. The interface should guide users through the information and actions required to begin their internship journey.", skill: ["HTML", "CSS", "Forms", "JavaScript"], status: "completed"},
 
-        {number: "06", title: "Build the Task Submission System", day: 19, description: "Create an interface through which interns can prepare and submit their task work.", difficult: "Intermediate", details: "You'll create a task submission experience where interns can prepare their work and submit completed tasks. The interface should make the submission process clear, organized, and easy to use.", skill: ["HTML", "CSS", "Forms", "JavaScript"]},
+        {number: "06", title: "Build the Task Submission System", day: 19, description: "Create an interface through which interns can prepare and submit their task work.", difficult: "Intermediate", details: "You'll create a task submission experience where interns can prepare their work and submit completed tasks. The interface should make the submission process clear, organized, and easy to use.", skill: ["HTML", "CSS", "Forms", "JavaScript"], status: "in-progress"},
 
-        {number: "07", title: "Build the Intern Dashboard", day: 22, description: "Create a dashboard where an intern can view their profile, progress, tasks, and submissions.", difficult: "Intermediate → Advanced", details: "You'll bring several internship features together in a dashboard experience. Interns should be able to view important information such as their profile, task progress, completed work, and submissions from one place.", skill: ["HTML", "CSS", "JavaScript", "Dashboard UI"]},
+        {number: "07", title: "Build the Intern Dashboard", day: 22, description: "Create a dashboard where an intern can view their profile, progress, tasks, and submissions.", difficult: "Intermediate → Advanced", details: "You'll bring several internship features together in a dashboard experience. Interns should be able to view important information such as their profile, task progress, completed work, and submissions from one place.", skill: ["HTML", "CSS", "JavaScript", "Dashboard UI"], status: "not-started"},
 
-        {number: "08", title: "Build the Complete TechBridge Internship Platform", day: 26, description: "Combine the different components created during the internship into a complete TechBridge platform.", difficult: "Advanced", details: "You'll bring several internship features together in a dashboard experience. Interns should be able to view important information such as their profile, task progress, completed work, and submissions from one place.You'll bring together the different experiences created throughout the internship into a complete TechBridge platform. The final project demonstrates how individual pages and features can work together as one cohesive product.", skill: ["HTML", "CSS", "JavaScript","Responsive Design", "UI Integration"]},
+        {number: "08", title: "Build the Complete TechBridge Internship Platform", day: 26, description: "Combine the different components created during the internship into a complete TechBridge platform.", difficult: "Advanced", details: "You'll bring several internship features together in a dashboard experience. Interns should be able to view important information such as their profile, task progress, completed work, and submissions from one place.You'll bring together the different experiences created throughout the internship into a complete TechBridge platform. The final project demonstrates how individual pages and features can work together as one cohesive product.", skill: ["HTML", "CSS", "JavaScript","Responsive Design", "UI Integration"], status: "not-started"},
     ]
 };
 
@@ -582,9 +582,6 @@ if(challengeContainer) {
         filterChallenges();
     });
 
-    /* Display the number of challenges shown  */
-   /*  challengeCountNo.textContent = allChallenges.length; */
-
     /* Reset Filter */
     resetFilterBtn.addEventListener("click", () => {
         selectedFilterTrack = "all";
@@ -662,3 +659,322 @@ if(challengeModal) {
 
     modalClose.addEventListener("click", closeChallengeModal);
 };
+
+/* DASHBOARD FUNCTIONS */
+const taskContainer = document.getElementById("task_container");
+const taskNoResult = document.getElementById("task_no_results");
+const totalTask = document.getElementById("total_task");
+const completedTask = document.querySelector(".completed_task");
+const inProgressTask = document.getElementById("inProgress_task");
+const notStartedTask = document.getElementById("notStarted_task");
+const progressPercent = document.getElementById("progress_text");
+const taskPercentage = document.getElementById("progress_percent_text");
+const progressFill = document.getElementById("progress_fill");
+const taskFilterButtons = document.querySelectorAll("#task_filters .task_filter");
+const taskModal = document.getElementById("task_modal");
+const taskModalClose = document.querySelectorAll(".task_modal_close");
+const taskModalNumber = document.getElementById("task_modal_number");
+const taskModalTitle = document.getElementById("task_modal_title");
+const taskModalStatus = document.getElementById("task_modal_status");
+const taskModalDescription =  document.getElementById("task_modal_description");
+const taskModalDetails = document.getElementById("task_modal_details");
+
+/* FUNCTION TO DISPLAY TASKS */
+if(taskContainer) {
+    let selectedTaskStatus  = "all";
+
+    function displayTasks(taskList) {
+        taskContainer.innerHTML="";
+
+        if(taskList.length === 0) {
+            taskNoResult.style.display = "flex"
+        } else {
+            taskNoResult.style.display = "none";
+
+            taskList.forEach(task => {
+                const taskCard = document.createElement("article");
+                taskCard.classList.add("task_card"), task.status
+
+                taskContainer.appendChild(taskCard);
+
+                taskCard.innerHTML = `
+                    <div class="task_content">
+                        <span class="task_no ${task.status}">
+                            ${task.number}
+                        </span>
+
+                        <div>
+                            <span class="task_status ${task.status}"> <i></i> ${task.status} </span>
+
+                            <h3 class="task_h3">
+                                ${task.title}
+                            </h3>
+
+                            <p class="task_description">
+                                ${task.description}
+                            </p>
+
+                            <div class="task_actions"> 
+                                <button
+                                    type="button"
+                                    class="view_task_btn btn_outline"
+                                    data-task-id="${task.number}"
+                                >
+                                    View Task
+                                </button>
+
+                                ${task.status === "completed" || task.status === "not-started" ? "" : `
+                                    <button 
+                                        type="button"
+                                        class="complete_task_btn cta_button"
+                                        data-task-id="${task.number}"
+                                    >   Mark as Completed </button>
+                                `}
+
+                                ${task.status === "not-started" ? `
+                                        <button
+                                            type="button"
+                                            class="inProgress_task_btn cta_button"
+                                            data-task-id="${task.number}"
+                                        >
+                                            Start Task
+                                        </button>
+                                    ` :
+                                    ""
+                                }
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                taskContainer.appendChild(taskCard);
+            })
+        }
+    };
+
+    function updateProgress() {
+        const totalTasks = internshipTracks.webDevelopment.length;
+
+        /* To get the number of task completed */ 
+        const completedTasks = internshipTracks.webDevelopment.filter(task => task.status === "completed").length;
+
+        /* Get the task for in progress */
+        const inProgressTasks = internshipTracks.webDevelopment.filter(task => task.status === "in-progress").length;
+
+        /* Get task for not started */
+        const notStartedTasks = internshipTracks.webDevelopment.filter(task => task.status === "not-started").length;
+
+        const progressPercentage = (completedTasks/totalTasks) * 100;
+
+        /* Populate the HTML */
+        totalTask.textContent = totalTasks;
+        completedTask.textContent = completedTasks;
+        inProgressTask.textContent = inProgressTasks;
+        notStartedTask.textContent = notStartedTasks;
+        progressPercent.textContent = `${completedTasks} / ${totalTasks} Task Completed`;
+        taskPercentage.textContent = `${progressPercentage}%`;
+        progressFill.style.width = `${progressPercentage}%`;
+    };
+
+
+    function filterTasks() {
+        let filteredTasks = internshipTracks.webDevelopment;
+
+        if(selectedTaskStatus  !== "all") {
+            filteredTasks = internshipTracks.webDevelopment.filter(task => task.status === selectedTaskStatus);
+        };
+
+        displayTasks(filteredTasks);
+    };
+
+    function openTaskModal(taskId) {
+        const task = internshipTracks.webDevelopment.find(task => task.number === taskId);
+
+        if(!task) return;
+
+        taskModalNumber.textContent = `TASK ${task.number}`;
+        taskModalTitle.textContent = task.title;
+        taskModalStatus.innerHTML = `
+            <span class="task_status ${task.status}"> <i></i> ${task.status} </span>
+        ` ;
+        taskModalDescription.textContent = task.description;
+        taskModalDetails.textContent = task.details;
+        taskModal.classList.add("show");
+        taskModal.setAttribute("aria-hidden", "false");
+    };
+
+     /* Remove task modal */
+    function closeTaskModal() {
+        taskModal.classList.remove("show");
+        taskModal.setAttribute("aria-hidden", "true");
+    };
+
+    taskModalClose.forEach(btn => btn.addEventListener("click", closeTaskModal));
+
+
+    /* filter tasks with status buttons */
+    taskFilterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedTaskStatus = button.dataset.status;
+
+            taskFilterButtons.forEach(btn => btn.classList.remove("active"));
+
+            button.classList.add("active");
+
+            filterTasks();
+        });
+    });
+
+    displayTasks(internshipTracks.webDevelopment);
+    updateProgress();
+
+    /* Funtion for start task button, mark task as completed and view task */
+    taskContainer.addEventListener("click", (e) => {
+        /* Start task button */
+        const inProgressBtn = e.target.closest(".inProgress_task_btn");
+        
+        if(inProgressBtn) {
+            const taskId = inProgressBtn.dataset.taskId;
+
+            const task = internshipTracks.webDevelopment.find(task => task.number === taskId);
+
+            if(!task) return;
+
+            task.status = "in-progress";
+
+            filterTasks();
+            updateProgress();
+
+            return;
+        };
+
+        /* Mark task as completed */
+        const completeBtn = e.target.closest(".complete_task_btn");
+
+        if(completeBtn) {
+            const taskId = completeBtn.dataset.taskId;
+
+            const task = internshipTracks.webDevelopment.find(task => task.number === taskId);
+
+            if(!task) return;
+
+            task.status = "completed"
+
+            filterTasks();
+            updateProgress();
+
+            return;
+        };
+
+        /* View Button */
+        const viewButton = e.target.closest(".view_task_btn");
+
+        if(viewButton) {
+            const taskId = viewButton.dataset.taskId;
+
+            openTaskModal(taskId);
+        };
+    });
+};
+
+/* WEB TECHNOLOGY FUNCTION */
+
+   /* modern web technologies data */
+const webTechnologies = {
+    nextjs: {
+        title: "Next.js",
+        image: "/img/nextjs-icon.png",
+        description:
+            "Next.js is a React framework built by Vercel. It is used to build modern web applications. It provides features and tools that help developers create fast, scalable, and production-ready applications.",
+        features: [
+            "Built on React",
+            "Routing and application structure",
+            "Server and client rendering",
+            "Suitable for modern web applications"
+        ],
+        link: "https://nextjs.org/docs"
+    },
+
+    vue: {
+        title: "Vue.js",
+        image: "/img/vuejs-icon.png",
+        description:
+            "Vue.js is a component-based JavaScript framework for building user interfaces. It is designed to be approachable while providing the tools needed to create interactive and scalable web applications.",
+        features: [
+            "Component-based development",
+            "Reactive user interfaces",
+            "Simple and flexible structure",
+            "Suitable for interactive web applications"
+        ],
+        link: "https://vuejs.org/guide/introduction.html"
+    },
+
+    angular: {
+        title: "Angular",
+        image: "/img/angular-icon.png",
+        description:
+            "Angular is a web application framework maintained by Google. It is used for building structured and scalable applications. It provides a complete development environment for creating feature-rich web applications.",
+        features: [
+            "Component-based architecture",
+            "Built with TypeScript",
+            "Powerful development tools",
+            "Suitable for large applications"
+        ],
+        link: "https://angular.io/docs"
+    },
+
+    backend: {
+        title: "Backend Development",
+        image: "/img/backend-icon.png",
+        description:
+            "Backend development focuses on the server-side of a web application. It handles areas such as data processing, business logic, authentication, APIs, and communication with databases.",
+        features: [
+            "Node.js",
+            "Express.js",
+            "Django",
+            "Flask",
+            "Laravel"
+        ],
+        link: "https://www.google.com/search?q=Backend%20Dev%20documentation"
+    }
+};
+
+const technologyButtons = document.querySelectorAll("#technology_filters .technology_btn");
+const technologyIcon = document.getElementById("technology_icon");
+const technologyTitle = document.getElementById("technology_title");
+const technologyDescription = document.getElementById("technology_description");
+const technologyFeatures = document.getElementById("technology_features");
+const technologyLink = document.getElementById("technology_link");
+
+if(technologyIcon) {
+    /* function to display technology */
+    function displayTechnology(technologyName) {
+        const technology = webTechnologies[technologyName];
+
+        if(!technology) return;
+
+        technologyIcon.src = technology.image;
+        technologyIcon.alt = technology.title
+        technologyTitle.textContent = technology.title;
+        technologyDescription.textContent = technology.description;
+        technologyFeatures.innerHTML = technology.features.map(feature => `<li> <span>&checkmark;</span> ${feature} </li>`).join("");
+        technologyLink.href = technology.link;
+
+    };
+
+    /* Function for technology button */
+    technologyButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const technologyName = button.dataset.technology;
+
+            technologyButtons.forEach(button => button.classList.remove("active"));
+
+            button.classList.add("active");
+
+            displayTechnology(technologyName);
+        })
+    });
+
+    displayTechnology("nextjs");
+};
+
