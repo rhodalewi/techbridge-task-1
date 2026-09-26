@@ -114,6 +114,8 @@ body {
   color: var(--text-2);
   line-height: 1.6;
   overflow-x: hidden;
+  min-width: 20rem;
+  height: 100%;
 }
 
 a {
@@ -237,11 +239,11 @@ img {
 #cta_button {
   background-color: var(--primary);
   color: var(--bg);
-  padding: 0.625rem 1rem;  
+  padding: 0.425rem 1rem;  
   border-radius: var(--radius-sm);
   font-weight: 700;
-  font-size: 0.875rem;
-  font: inherit;
+  font-size: 0.875rem !important;
+  font-family: var(--font-jarkata);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -2263,10 +2265,9 @@ div:first-child p {
 }
 
 .view_challenge_btn,
-.modal_info_grid .cta_button  {
+.modal_button  {
   padding: 0.525rem 0.875rem; 
-  font-size: 0.75rem;
-  font-family: var(--font-jarkata);
+  font-size: 0.75rem !important;
   transition: transform var(--transition);
 }
 
@@ -2844,7 +2845,7 @@ div:first-child p {
   background: var(--bg);
   color: var(--primary);
   padding: 0.325rem 0.75rem;
-  font-size: 0.75rem;
+  font-size: 0.75rem !important;
 }
 
 .challenge_preview .cta_button:hover {
@@ -2938,7 +2939,7 @@ div:first-child p {
   color: var(--primary);
   border: 1px solid var(--border);
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.75rem !important;
   padding: 0.325rem 0.75rem;
 }
 
@@ -2988,10 +2989,10 @@ div:first-child p {
   font-family: inherit;
 }
 
-.cta_button.complete_task_btn,
-.cta_button.inProgress_task_btn {
-  padding: 0.325rem 1rem;
-  font-size: 0.75rem;
+.task_grid .cta_button.complete_task_btn,
+.task_grid .cta_button.inProgress_task_btn {
+  padding: 0.425rem 1rem;
+  font-size: 0.75rem !important;
   border: none;
 }
 
@@ -3038,7 +3039,6 @@ div:first-child p {
 
 #cta_button {
   padding: 0.325rem 1rem;
-  font-size: 0.875rem;
   width: fit-content;
 }
 
