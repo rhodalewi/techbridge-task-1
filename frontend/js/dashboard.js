@@ -1,5 +1,6 @@
-const API_URL = "http://localhost:3000/api/tasks";
-const TECHNOLOGY_API_URL = "http://localhost:3000/api/technologies";
+const BACKEND_URL = "https://techbridge-backend-t4du.onrender.com" || "http://localhost:3000";
+
+const API_URL = `${BACKEND_URL}/api/tasks`;
 
 /* DASHBOARD Variables */
 const taskContainer = document.getElementById("task_container");
@@ -310,7 +311,7 @@ async function fetchTechnologies() {
 
     try {
         const [response] = await Promise.all([
-            fetch(TECHNOLOGY_API_URL),
+            fetch(`${BACKEND_URL}/api/technologies`),
             delay(2000)
         ])
 
@@ -383,7 +384,7 @@ async function checkBackendStatus() {
     if(!backendStatus) return;
 
     try {
-        const response = await fetch("http://localhost:3000/api/health");
+        const response = await fetch(`${BACKEND_URL}/api/health`);
 
         if(!response.ok) {
             throw new Error("Backend is offline");
