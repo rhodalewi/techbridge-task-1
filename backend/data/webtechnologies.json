@@ -1,0 +1,58 @@
+{
+    "nextjs": {
+        "title": "Next.js",
+        "image": "../img/nextjs-icon.png",
+        "description":
+            "Next.js is a React framework built by Vercel. It is used to build modern web applications. It provides features and tools that help developers create fast, scalable, and production-ready applications.",
+        "features": [
+            "Built on React",
+            "Routing and application structure",
+            "Server and client rendering",
+            "Suitable for modern web applications"
+        ],
+        "link": "https://nextjs.org/docs"
+    },
+
+    "vue": {
+        "title": "Vue.js",
+        "image": "../img/vuejs-icon.png",
+        "description":
+            "Vue.js is a component-based JavaScript framework for building user interfaces. It is designed to be approachable while providing the tools needed to create interactive and scalable web applications.",
+        "features": [
+            "Component-based development",
+            "Reactive user interfaces",
+            "Simple and flexible structure",
+            "Suitable for interactive web applications"
+        ],
+        "link": "https://vuejs.org/guide/introduction.html"
+    },
+
+    "angular": {
+        "title": "Angular",
+        "image": "../img/angular-icon.png",
+        "description":
+            "Angular is a web application framework maintained by Google. It is used for building structured and scalable applications. It provides a complete development environment for creating feature-rich web applications.",
+        "features": [
+            "Component-based architecture",
+            "Built with TypeScript",
+            "Powerful development tools",
+            "Suitable for large applications"
+        ],
+        "link": "https://angular.io/docs"
+    },
+
+    "backend": {
+        "title": "Backend",
+        "image": "../img/backend-icon.png",
+        "description":
+            "Backend development focuses on the server-side of a web application. It handles areas such as data processing, business logic, authentication, APIs, and communication with databases.",
+        "features": [
+            "Node.js",
+            "Express.js",
+            "Django",
+            "Flask",
+            "Laravel"
+        ],
+        "link": "https://www.google.com/search?q=Backend%20Dev%20documentation"
+    }
+}
