@@ -11,7 +11,8 @@ app.use(express.json());
 
 //path to the task data
 const tasksPath = path.join(__dirname, "data", "task.json");
-const technologiesPath = path.join(__dirname, "data", "webtechnologies.json")
+const technologiesPath = path.join(__dirname, "data", "webtechnologies.json");
+/* const challengesPath = path.join(__dirname, "data", "challenges.json"); */
 
 /* Read tasks from the JSON file*/
 async function readTasks() {
@@ -29,6 +30,12 @@ async function readTechnologies() {
     const technologies = await fs.readFile(technologiesPath, "utf-8");
     return JSON.parse(technologies);
 };
+
+/* Read challenges from the JSON file */
+/* async function readChallenges() {
+    const challenges = await fs.readFile(challengesPath, "utf-8");
+    return JSON.parse(challenges); 
+}; */
 
 
 /* ENDPOINTS */
@@ -131,6 +138,22 @@ app.get("/api/technologies", async (req, res) => {
         res.status(500).json({message: "Failed to retrieve technologies!"})
     };
 });
+
+/* endpoint to get all challenges */
+/* app.get("api/challenges", async (req, res) => {
+    try {
+        const challenge = await readChallenges();
+
+        if(!challenge) {
+            return res.status(404).json({message: "Challenges not found!"});
+        };
+
+        res.status(200).json(challenge);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({message: "Failed to retrieve challenges!"});
+    }
+}) */
 
 /* To check if backend is connected to frontend */
 app.get("/api/health", (req, res) => {

@@ -13,7 +13,7 @@
             <header class="header_container">
                 <div class="header container">
                     <!-- Logo -->
-                    <a href="/" class="brand_logo">
+                    <a href="#home" class="brand_logo">
                         <img
                         src="../img/techbridge-logo.png"
                         alt="TechBridge logo" class="logo"
@@ -21,54 +21,59 @@
                         <p>by Baselink Services Limited</p>
                     </a>
 
-                    <!-- Toggle button -->
-                <div class="toggle_sidebar">
-                    <input type="checkbox" id="menu_toggle">
-                    <!-- Label with images -->
-                    <label for="menu_toggle" class="menu_btn">
-                        <img src="../img/menu-icon.png" alt="Menu" class="menu_icon">
-                        <img src="../img/icon-close.svg" alt="Close" class="close_icon">
-                    </label>
-                </div>
+                    <div class="header_right">
+                        <!-- NAVIGATION LINKS AND APPLY BUTTON -->
+                        <div class="nav_container">
+                        <div class="navLinks_CTA">
+                            <nav>
+                            <a href="#home" class="active">  Home </a>
+                            <a href="../html/programs.html"> Programs</a>
+                            <a href="../html/challenges.html">  Challenges </a>
+                            <a href="../html/dashboard.html">Dashboard </a>
+                            <a href="./"> Why Us</a>
+                            </nav>
 
-                <!-- NAVIGATION LINKS AND APPLY BUTTON -->
-                <div class="nav_container">
-                    <div class="navLinks_CTA">
-                    <nav class="">
-                        <a href="../index.html">  Home </a>
-                        <a href="../index.html#programs"> Programs</a>
-                        <a href="../index.html#internship">  Internship </a>
-                        <a href="#home" class="active"> Challenges </a>
-                        <a href="../html/dashboard.html">Dashboard</a>
-                    </nav>
+                            <!-- CTA BUTTON -->
+                            <a 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/viewform"
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="cta_button header_btn"
+                            >
+                            Get Started
+                            <img src="../img/btn-arrow-icon.png" alt="Arrow">
+                            </a>
+                        </div>
+                        </div>
 
-                    <!-- CTA BUTTON -->
-                    <a 
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/viewform"
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        class="cta_button header_btn"
-                    >
-                        Join Now
-                        <img src="../img/btn-arrow-icon.png" alt="Arrow">
-                    </a>
+                        <!-- Theme and mobile toggle -->
+                        <div class="header_controls">
+                        <!-- Theme Toggle -->
+                        <button
+                            type="button"
+                            id="theme_toggle"
+                            class="theme_toggle_btn"
+                            aria-label="Toggle dark mode"
+                            title="Toggle dark mode"
+                        >
+                            <img src="../img/dark-mode-icon.png" alt="Dark mode" class="theme_icon moon_icon">
+
+                            <img src="../img/light-mode-icon.png" alt="Light mode" class="theme_icon sun_icon">
+                        </button>
+
+                            <!-- Mobile Menu Toggle -->
+                        <div class="toggle_sidebar">
+                            <input type="checkbox" id="menu_toggle">
+                            <!-- Label with images -->
+                            <label for="menu_toggle" class="menu_btn">
+                            <img src="./img/menu-icon.png" alt="Menu" class="menu_icon">
+                            <img src="./img/icon-close.svg" alt="Close" class="close_icon">
+                            </label>
+                        </div>
+                        </div>
                     </div>
                 </div>
-
-                    <!-- Actions -->
-                <div class="nav_actions">
-                    <!-- Theme toggle -->
-                    <label
-                    for="theme_toggle"
-                    class="theme_switch"
-                    aria-label="Toggle dark mode"
-                    >
-                    <span class="sun">☀</span>
-                    <span class="moon">☾</span>
-                    </label>
-                </div>
-                </div>
-            </header>
+            </header> 
 
             <!-- Sidebar overlay -->
             <label for="menu_toggle" class="mobile_overlay"></label>
@@ -237,7 +242,7 @@
                         </div>
 
                         <!-- Result count and Reset button -->
-                        <div class="result_reset">
+                        <div class="result_reset"challenge_modal>
                             <!--  RESULT COUNT -->
                             <p class="challenge_no"><span id="challenge_count"></span> of 6 challenges</p>
                             
@@ -379,6 +384,15 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- BACK BUTTON -->
+                <a 
+                    href="../index.html"
+                    class="cta_button navigate"
+                >
+                    <span class="rotate">&#x1F806;</span>
+                    <span>Back to Homepage</span>
+                </a>
             </main>
 
             <!-- FOOTER SECTION -->
@@ -451,6 +465,7 @@
             </footer>
         </div>
 
-        <script src="../js/script.js"></script>
+        <script src="../js/challenges.js"></script>
+        <script src="../js/themeToggle.js"></script>
     </body>
 </html>

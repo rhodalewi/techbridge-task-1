@@ -1,0 +1,182 @@
+{
+    "dataAnalytics": [
+        {
+            "id": 1,
+            "title": "Sales Performance Analysis",
+            "trackKey": "dataAnalytics", 
+            "track": "Data Analytics",
+            "difficulty": "Beginner",
+            "description":
+                "Analyse a company's monthly sales dataset to identify top-performing products, peak months, and regional trends.",
+            "outcome":
+                "A clean summary report with key sales insights and a simple visual dashboard.",
+            "details":
+                "Practise data cleaning and basic analysis by working through a realistic sales dataset. You'll identify which products sell best, which months perform strongest, and surface insights that a sales manager would find useful.",
+            "skills": [
+                "Data Cleaning",
+                "Pivot Tables",
+                "Bar & Line Charts",
+                "Basic Visualization"
+            ],
+            "tools": [
+                "Microsoft Excel",
+                "Google Sheets"
+            ],
+            "deliverable":
+                "A cleaned dataset and a short sales analysis report.",
+            "estimatedTime": "3–4 hours",
+            "expectedResult":
+                "A clear summary of the company's sales performance with useful recommendations."
+        },
+
+        {
+            "id": 2,
+            "title": "Employee Performance Report",
+            "trackKey": "dataAnalytics",
+            "track": "Data Analytics",
+            "difficulty": "Intermediate",
+            "description":
+                "Analyse HR data to surface patterns in performance ratings, attendance, and department efficiency.",
+            "outcome":
+                "Produce an employee performance report containing useful insights about workforce metrics.",
+            "details":
+                "You will examine an HR dataset and look for patterns in performance ratings, attendance, and department efficiency. Use formulas, Pivot Tables, SQL aggregations and basic visualizations to organize and communicate your findings.",
+            "skills": [
+                "SQL aggregations",
+                "Pivot Tables",
+                "Data Visualization",
+                "Data Interpretation"
+            ],
+            "tools": [
+                "Microsoft Excel",
+                "Google Sheets",
+                "SQL Editor"
+            ],
+            "deliverable":
+                "An analysis report with at least three key findings, a supporting Pivot Table, and 2–3 concrete recommendations.",
+            "estimatedTime": "5–6 hours",
+            "expectedResult":
+                "A report that identifies important customer segments and highlights meaningful patterns."
+        },
+
+        {
+            "id": 3,
+            "title": "Business Performance Dashboard",
+            "trackKey": "dataAnalytics",
+            "track": "Data Analytics",
+            "difficulty": "Advanced",
+            "description":
+                "Build a business dashboard that combines important performance metrics into one clear visual report.",
+            "outcome":
+                "Create an interactive dashboard that helps stakeholders understand business performance.",
+            "details":
+                "You will work with a business dataset and select the most useful metrics to display. Organize the data, create charts, and design a dashboard that allows users to quickly understand important performance trends.",
+            "skills": [
+                "Data Analysis",
+                "Dashboards",
+                "Charts",
+                "Data Visualization"
+            ],
+            "tools": [
+                "Microsoft Excel",
+                "Google Sheets"
+            ],
+            "deliverable":
+                "A complete business performance dashboard.",
+            "estimatedTime": "4–5 hours",
+            "expectedResult":
+                "A clear dashboard presenting important business metrics and trends."
+        }
+    ],
+
+    "webDevelopment": [
+        {
+            "id": 4,
+            "title": "Product Landing Page",
+            "trackKey": "webDevelopment",
+            "track": "Web Development",
+            "difficulty": "Beginner",
+            "description":
+                "Build a responsive product landing page for a product or service using HTML and CSS.",
+            "outcome":
+                "Create a clean product landing page with a clear layout, content sections, and call-to-action.",
+            "details":
+                "You will build a product landing page for a fictional product or service. The page should contain a hero section, feature section, call-to-action, and footer while maintaining a responsive layout across different screen sizes.",
+            "skills": [
+                "HTML",
+                "CSS",
+                "Media Queries",
+                "Responsive Design",
+                "Layout"
+            ],
+            "tools": [
+                "VS Code",
+                "Browser"
+            ],
+            "deliverable":
+                "A deployed landing page with at least four sections (hero, features, pricing, footer) that is fully responsive.",
+            "estimatedTime": "3–4 hours",
+            "expectedResult":
+                "A polished responsive landing page that works well on desktop and mobile."
+        },
+
+        {
+            "id": 5,
+            "title": "Filterable Product Grid",
+            "trackKey": "webDevelopment",
+            "track": "Web Development",
+            "difficulty": "Intermediate ",
+            "description":
+                "Create a filterable product grid that allows users to sort and search through a collection of items.",
+            "outcome":
+                "Build a functional product grid with filtering and search capabilities.",
+            "details":
+                "You will build a filterable product grid that allows users to sort and search through a collection of items. Implement interactive filtering and search functionality using JavaScript.",
+            "skills": [
+                "HTML",
+                "CSS Grid",
+                "JavaScript",
+                "DOM Manipulation",
+                "Responsive Design"
+            ],
+            "tools": [
+                "VS Code",
+                "Browser DevTools"
+            ],
+            "deliverable":
+                "A functional product grid with filtering and search capabilities.",
+            "estimatedTime": "5-6 hours",
+            "expectedResult":
+                "A responsive product grid that allows users to easily find and sort items."
+        },
+
+        {
+            "id": 6,
+            "title": "Responsive Admin Dashboard",
+            "trackKey": "webDevelopment",
+            "track": "Web Development",
+            "difficulty": "Advanced",
+            "description":
+                "Build a responsive admin dashboard with interactive elements and data visualization.",
+            "outcome":
+                "Create a functional admin dashboard that provides a comprehensive view of key metrics and allows for interactive data exploration.",
+            "details":
+                "You will create a responsive admin dashboard that displays key performance indicators, charts, and tables. Use JavaScript to implement interactive features and ensure the dashboard is fully responsive across different devices.",
+            "skills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Responsive Design",
+                "Data Visualization"
+            ],
+            "tools": [
+                "VS Code",
+                "Chrome DevTools"
+            ],
+            "deliverable":
+                "A responsive and interactive admin dashboard.",
+            "estimatedTime": "5–7 hours",
+            "expectedResult": "Create a functional admin dashboard that provides a comprehensive view of key metrics and allows for interactive data exploration"
+        }
+    ]
+}

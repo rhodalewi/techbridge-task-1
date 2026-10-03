@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <meta name="description" content="TechBridge - Bridging Learning to Real-World Experience">
     <title>TechBridge | Bridging Learning to Real-World Experience</title>
+    <script>
+        if(localStorage.getItem("techbridge-theme") === "dark") {
+            document.documentElement.classList.add("dark-mode");
+        }
+    </script>
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./img/techbridge-logo.png" type="image/x-icon">
   </head>
@@ -23,39 +28,55 @@
                 <p>by Baselink Services Limited</p>
             </a>
 
-            <!-- Toggle button -->
-            <div class="toggle_sidebar">
-                <input type="checkbox" id="menu_toggle">
-                <!-- Label with images -->
-                <label for="menu_toggle" class="menu_btn">
-                  <img src="./img/menu-icon.png" alt="Menu" class="menu_icon">
-                  <img src="./img/icon-close.svg" alt="Close" class="close_icon">
-                </label>
-            </div>
+            <div class="header_right">
+              <!-- NAVIGATION LINKS AND APPLY BUTTON -->
+              <div class="nav_container">
+                <div class="navLinks_CTA">
+                  <nav>
+                    <a href="#home" class="active">  Home </a>
+                    <a href="./html/programs.html"> Programs</a>
+                    <a href="./html/challenges.html">  Challenges </a>
+                    <a href="./html/dashboard.html">Dashboard </a>
+                    <a href="#why"> Why Us</a>
+                  </nav>
 
-            <!-- NAVIGATION LINKS AND APPLY BUTTON -->
-            <div class="nav_container">
-              <div class="navLinks_CTA">
-                <nav class="">
-                  <a href="#home" class="active">  Home </a>
-                  <a href="#programs"> Programs</a>
-                  <a href="#internship">  Internship </a>
-                  <a href="#why"> Why Us</a>
-                  <a href="#community"> Community </a>
-                  <a href="#contact">Contact </a>
-                </nav>
+                    <!-- CTA BUTTON -->
+                  <a 
+                      href="https://docs.google.com/forms/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/viewform"
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      class="cta_button header_btn"
+                  >
+                    Get Started
+                    <span>&#x1F806;</span>
+                  </a>
+                </div>
+              </div>
 
-
-                <!-- CTA BUTTON -->
-                <a 
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/viewform"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="cta_button header_btn"
+              <!-- Theme and mobile toggle -->
+              <div class="header_controls">
+                <!-- Theme Toggle -->
+                <button
+                    type="button"
+                    id="theme_toggle"
+                    class="theme_toggle_btn"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
                 >
-                  Apply Now
-                  <img src="./img/btn-arrow-icon.png" alt="Arrow">
-                </a>
+                    <img src="./img/dark-mode-icon.png" alt="Dark mode" class="theme_icon moon_icon">
+
+                    <img src="./img/light-mode-icon.png" alt="Light mode" class="theme_icon sun_icon">
+                </button>
+
+                  <!-- Mobile Menu Toggle -->
+                <div class="toggle_sidebar">
+                  <input type="checkbox" id="menu_toggle">
+                  <!-- Label with images -->
+                  <label for="menu_toggle" class="menu_btn">
+                    <img src="./img/menu-icon.png" alt="Menu" class="menu_icon">
+                    <img src="./img/icon-close.svg" alt="Close" class="close_icon">
+                  </label>
+                </div>
               </div>
             </div>
         </div>
@@ -63,20 +84,6 @@
 
       <!-- Sidebar overlay -->
       <label for="menu_toggle" class="mobile_overlay"></label>
-
-      <!-- Actions -->
-            <div class="nav_actions">
-              <!-- Theme toggle -->
-              <label
-                for="theme_toggle"
-                class="theme_switch"
-                aria-label="Toggle dark mode"
-              >
-                <span class="sun">☀</span>
-                <span class="moon">☾</span>
-              </label>
-
-            </div>
 
       <!-- MAIN SECTION -->
       <main>
@@ -89,26 +96,26 @@
                 WELCOME TO TECHBRIDGE
               </span>
 
-              <h1> Bridging Learning to <span>Real-World</span> Experience</h1>
+              <h1>Welcome to the <br><span>TechBridge Intern</span> <br>Management Platform</h1>
 
               <p class="hero_text">
-                TechBridge by Baselink Services Limited helps learners develop practical skills and gain real-world experience through focused learning programs and a 30-day practical internship.
+                A real working platform where TechBridge interns track their internship progress, access tasks, explore coding challenges, and monitor completed work all in one place.
               </p>
 
               <div class="hero_buttons">
                 <a 
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScoEhKAAUHw0lB2lzI5oT4x_VPQNSY2XE8Hv71q0XZ7IS_3bA/viewform" target="_blank" rel="noopener noreferrer"
+                  href="./html/dashboard.html" rel="noopener noreferrer"
                   class="cta_button hero_btn"
                 >
-                  Application Form
-                  <img src="./img/btn-arrow-icon.png" alt="Arrow">
+                  View Dashboard
+                  <span>&#x1F806;</span>
                 </a>
 
                 <a
-                  href="#programs"
+                  href="./html/challenges.html"
                   class="btn_outline cta_button hero_btn"
                 >
-                  Explore Programs
+                  Explore Challenges
                 </a>
 
               </div>
@@ -167,6 +174,42 @@
                 </div>
               </div>
             </div>
+        </section>
+
+        <!-- SEARCH SECTION -->
+        <section class="platform_search">
+          <div class="platform_search_container container">
+            <!-- <span class="section_badge">EXPLORE TECHBRIDGE </span>
+
+            <h2>Find Tasks & Challenges</h2> -->
+            <p>Search for internship tasks and practical challenges to continue building your skills. </p>
+
+            <form class="platform_search_form" id="platform_search_form">
+              <div class="search_input_wrapper">
+                <span class="search_icon">
+                  <img src="./img/search-icon.png" alt="Search">
+                </span>
+
+                <input
+                  type="search"
+                  id="platform_search_input"
+                  placeholder="Search tasks or challenges..."
+                  autocomplete="off"
+                >
+
+                <button type="submit" id="platform_search_btn">
+                  Search
+                </button>
+              </div>
+            </form>
+
+            <!-- SEARCH RESULTS -->
+            <div
+              class="platform_search_results"
+              id="platform_search_results"
+              aria-live="polite"
+            ></div>
+          </div>
         </section>
 
         <!-- Program Section -->
@@ -411,7 +454,7 @@
               class="btn_white cta_button"
             >
               Apply Now
-              <img src="./img/btn-arrow-icon.png" alt="Learn">
+              <span>&#x1F806;</span>
             </a>
           </div>
         </section>
@@ -547,5 +590,38 @@
         </div>
       </footer>
     </div>
+
+    <!-- SEARCH RESULT MODAL -->
+    <div class="search_modal" id="search_modal" aria-hidden="true">
+      <div class="search_modal_overlay" data-close-modal></div>
+
+      <div class="search_modal_content">
+        <div class="modal_header_top">
+          <span class="search_modal_type" id="search_modal_type"></span>
+
+          <button
+            type="button"
+            class="modal_close"
+            id="search_modal_close"
+            aria-label="Close challenge details"
+          >
+            <img
+                src="./img/icon-close.svg"
+                alt="close"
+            >
+          </button>
+        </div>
+
+        <h2 id="search_modal_title"></h2>
+
+        <p id="search_modal_description"></p>
+
+        <div class="search_modal_details" id="search_modal_details"></div>
+      </div>
+    </div>
+
+    <script src="./js/challenges.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/themeToggle.js"></script>
   </body>
 </html>

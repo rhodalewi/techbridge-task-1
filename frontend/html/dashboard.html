@@ -40,20 +40,30 @@
 
             <!-- MAIN  -->
             <main class="dashboard">
-                <div class="backend_status_container container">
-                    <span class="backend_status_label">
-                        Backend Status:
-                    </span>
-
-                    <span
-                        id="backend_status"
-                        class="backend_status checking"
-                        role="status"
-                        aria-live="polite"
+                <div class="status_homepage container">
+                    <a 
+                        href="../index.html"
+                        class="dashboard_cta"
                     >
-                        <span class="status_dot"></span>
-                        Checking...
-                    </span>
+                        <span>&#x1f804;</span>
+                        <span>Back to Homepage</span>
+                    </a>
+
+                    <div class="backend_status_container">
+                        <span class="backend_status_label">
+                            Backend Status:
+                        </span>
+
+                        <span
+                            id="backend_status"
+                            class="backend_status checking"
+                            role="status"
+                            aria-live="polite"
+                        >
+                            <span class="status_dot"></span>
+                            Checking...
+                        </span>
+                    </div>
                 </div>
 
                 <div class="container dashboard_content">
@@ -393,5 +403,6 @@
         </div>
 
         <script src="../js/dashboard.js"></script>
+        <script src="../js/themeToggle.js"></script>
     </body>
 </html>

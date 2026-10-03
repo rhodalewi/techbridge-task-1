@@ -1,6 +1,6 @@
 const BACKEND_URL = "https://techbridge-backend-t4du.onrender.com" || "http://localhost:3000";
 
-const API_URL = `${BACKEND_URL}/api/tasks`;
+const TASK_API_URL = `${BACKEND_URL}/api/tasks`;
 
 /* DASHBOARD Variables */
 const taskContainer = document.getElementById("task_container");
@@ -48,7 +48,7 @@ async function fetchTasks() {
 
     try {
         const [response] = await Promise.all([
-            fetch(API_URL),
+            fetch(TASK_API_URL),
             delay(2000)
         ]);
 
@@ -82,7 +82,7 @@ async function fetchTasks() {
 /* Function to change status */
 async function updateTaskStatus(taskId, newStatus) {
     try {
-        const response = await fetch(`${API_URL}/${taskId}`, {
+        const response = await fetch(`${TASK_API_URL}/${taskId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
